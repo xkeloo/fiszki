@@ -1,0 +1,12 @@
+<div class="container-fluid" style="text-align: center;">
+    <div class="list-group" >
+        <button type="button" class="list-group-item list-group-item-action active" disabled>Lista słówek</button>
+        <ul class="list-group list-group-horizontal" *ngFor="let flashcard of flashcards">
+            <button class="list-group-item list-group-item-action" routerLink="/flashcards/{{flashcard.id}}">{{ flashcard.question }}</button>
+            <button class="btn btn-outline-primary" (click)="editFlashcard(flashcard.id)">Edit</button>
+            <button class="btn btn-outline-danger" (click)="deleteFlashcard(flashcard.id)">Delete</button>
+        </ul>
+        <button class="btn btn-info" routerLink="/create">Create</button>
+        <button class="btn btn-primary" routerLink="/menu">Back</button>
+    </div>
+</div>

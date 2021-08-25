@@ -1,0 +1,28 @@
+shared:
+    -components:
+        -- menu?
+    -services:
+        -- token-interceptor
+        -- auth-guard
+
+module:
+    -authorization:
+        -components: 
+            -- login
+            -- register
+        -services:
+            -- auth-service
+    
+    -flashcards
+        -components:
+            -- flashcard-menu?
+            -- flashcard-create
+            -- flashcard-edit
+            -- flashcard-details
+            -- flashcard-list
+            -- flashcard-quiz
+        -models:
+            -- FlashcardListModel
+            -- FlashcardModel
+        -services:
+            -- flashcard-service

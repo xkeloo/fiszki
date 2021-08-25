@@ -1,0 +1,17 @@
+<div class="container-fluid" style="text-align: center; margin: auto; margin-top: 5%;">
+    <div class="card bg-light mb-5" style="max-width: 25rem; text-align: center; margin: auto;">
+      <div class="card-header">
+        <h3>{{activeFlashcard.question}}</h3>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title" *ngIf="answerVisible">{{activeFlashcard.answer}}</h5>
+      </div>
+    </div>
+    <h3 *ngIf="finished">Final Score: </h3>
+    <h3>{{score}} / {{index + 1}}</h3>
+    <button class="btn btn-primary" *ngIf="!answerVisible && !finished" (click)="makeVisible()">Check</button>
+    <button class="btn btn-primary" *ngIf="answerVisible && !finished" (click)="goodAnswer()">Good Answer</button>
+    <button class="btn btn-primary" *ngIf="answerVisible && !finished" (click)="badAnswer()">Bad Answer</button>
+    <button class="btn btn-primary" routerLink="/menu">Back</button>
+  </div>
+  
